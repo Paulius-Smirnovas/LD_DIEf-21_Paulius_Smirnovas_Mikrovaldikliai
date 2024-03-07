@@ -1,0 +1,77 @@
+#include "main.h"
+#include "stm32f4xx_hal.h"
+
+TIM_HandleTypeDef htim4;
+
+void SystemClock_Config(void);
+void MX_GPIO_Init(void);
+void MX_TIM4_Init(void);
+void Error_Handler(void);
+
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_TIM4_Init();
+
+  if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  while (1)
+  {
+  }
+}
+
+void SystemClock_Config(void)
+{
+  // Your existing system clock configuration code
+}
+
+void MX_TIM4_Init(void)
+{
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 8333 - 1; // To scale down to 3 Hz
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 2 - 1; // To have 1.5s period for PD12
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  HAL_TIM_PWM_Init(&htim4);
+
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 1 - 1; // 50% duty cycle for PD12
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_1);
+
+  htim4.Init.Period = 3 - 1; // To have 3s period for PD15
+  HAL_TIM_PWM_Init(&htim4);
+
+  sConfigOC.Pulse = 2 - 1; // 66.67% duty cycle for PD15
+  HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_4);
+}
+
+void MX_GPIO_Init(void)
+{
+  // Your existing GPIO initialization code
+}
+
+void Error_Handler(void)
+{
+  // Your existing error handler code
+}
+
+#ifdef  USE_FULL_ASSERT
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  // Your existing assert failed code
+}
+#endif

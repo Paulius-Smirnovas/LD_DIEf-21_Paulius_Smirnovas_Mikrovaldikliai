@@ -1,0 +1,56 @@
+Configuration	LabWork2
+STM32CubeMX 	6.10.0
+Date	02/15/2024
+MCU	STM32F407VGTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+23	PA0-WKUP	GPIO_Input	User Button
+59	PD12	GPIO_Output	Green LED
+60	PD13	GPIO_Output	Orange LED
+61	PD14	GPIO_Output	Red LED
+62	PD15	GPIO_Output	Blue LED
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+23	PA0-WKUP	GPIO_Input	User Button
+59	PD12	GPIO_Output	Green LED
+60	PD13	GPIO_Output	Orange LED
+61	PD14	GPIO_Output	Red LED
+62	PD15	GPIO_Output	Blue LED
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : LabWork2
+Project Folder : C:\Users\pauli\Desktop\Mikrovaldikliu lab\Patys Darbai\LabWork2
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_F4 V1.28.0
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
