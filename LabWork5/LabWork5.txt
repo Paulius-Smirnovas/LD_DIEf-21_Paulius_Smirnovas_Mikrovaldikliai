@@ -1,0 +1,70 @@
+Configuration	LabWork5
+STM32CubeMX 	6.10.0
+Date	03/20/2024
+MCU	STM32F407VGTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SPI1	Full-Duplex Master	SPI1_MISO	PA6
+SPI1	Full-Duplex Master	SPI1_MOSI	PA7
+SPI1	Full-Duplex Master	SPI1_SCK	PA5
+SYS	Trace Asynchronous Sw	SYS_JTMS-SWDIO	PA13
+SYS	Trace Asynchronous Sw	SYS_JTCK-SWCLK	PA14
+SYS	Trace Asynchronous Sw	SYS_JTDO-SWO	PB3
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+30	PA5	SPI1_SCK	
+31	PA6	SPI1_MISO	
+32	PA7	SPI1_MOSI	
+72	PA13	SYS_JTMS-SWDIO	
+76	PA14	SYS_JTCK-SWCLK	
+89	PB3	SYS_JTDO-SWO	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SPI1	Full-Duplex Master	SPI1_MISO	PA6
+SPI1	Full-Duplex Master	SPI1_MOSI	PA7
+SPI1	Full-Duplex Master	SPI1_SCK	PA5
+SYS	Trace Asynchronous Sw	SYS_JTMS-SWDIO	PA13
+SYS	Trace Asynchronous Sw	SYS_JTCK-SWCLK	PA14
+SYS	Trace Asynchronous Sw	SYS_JTDO-SWO	PB3
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+30	PA5	SPI1_SCK	
+31	PA6	SPI1_MISO	
+32	PA7	SPI1_MOSI	
+72	PA13	SYS_JTMS-SWDIO	
+76	PA14	SYS_JTCK-SWCLK	
+89	PB3	SYS_JTDO-SWO	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : LabWork5
+Project Folder : C:\Users\pauli\Desktop\Mikrovaldikliu lab\Patys Darbai\LabWork5
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_F4 V1.28.0
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+

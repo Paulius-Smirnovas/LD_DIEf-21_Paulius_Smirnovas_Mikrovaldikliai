@@ -1,0 +1,17 @@
+09:41:09 **** Incremental Build of configuration Debug for project LabWork6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LabWork6.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pauli\Desktop\Mikrovaldikliu lab\Patys Darbai\LabWork6\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LabWork6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LabWork6.elf
+ 
+arm-none-eabi-size  LabWork6.elf 
+arm-none-eabi-objdump -h -S LabWork6.elf  > "LabWork6.list"
+   text	   data	    bss	    dec	    hex	filename
+  15536	     24	   1744	  17304	   4398	LabWork6.elf
+Finished building: default.size.stdout
+ 
+Finished building: LabWork6.list
+ 
+
+09:41:10 Build Finished. 0 errors, 0 warnings. (took 648ms)
+

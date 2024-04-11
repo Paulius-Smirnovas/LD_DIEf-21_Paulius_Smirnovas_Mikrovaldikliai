@@ -1,0 +1,24 @@
+11:54:52 **** Incremental Build of configuration Debug for project LabWork5 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:11: warning: unused variable 'txIndex' [-Wunused-variable]
+  121 |   uint8_t txIndex = 0;
+      |           ^~~~~~~
+../Core/Src/main.c:120:11: warning: unused variable 'txData' [-Wunused-variable]
+  120 |   uint8_t txData[3] = {15, 7, 3};
+      |           ^~~~~~
+arm-none-eabi-gcc -o "LabWork5.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\pauli\Desktop\Mikrovaldikliu lab\Patys Darbai\LabWork5\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LabWork5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LabWork5.elf
+ 
+arm-none-eabi-size  LabWork5.elf 
+arm-none-eabi-objdump -h -S LabWork5.elf  > "LabWork5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13208	     24	   1912	  15144	   3b28	LabWork5.elf
+Finished building: default.size.stdout
+ 
+Finished building: LabWork5.list
+ 
+
+11:54:53 Build Finished. 0 errors, 2 warnings. (took 655ms)
+
